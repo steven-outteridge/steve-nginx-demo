@@ -11,6 +11,11 @@
     - name: start docker
       service: name=docker state=started
 
+    - name: Install docker-compose
+      shell: |
+        curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        chmod +x /usr/local/bin/docker-compose
+
     - name: Creates directory
       file:
         path: /var/tmp/docker
@@ -21,6 +26,10 @@
         src: Dockerfile
         dest: /var/tmp/docker
 
+    - name: Copy docker compose
+      template:
+        src: docker-compose.yml
+        dest: /var/tmp/docker
     - name: Copy index
       template:
         src: index.html
@@ -28,5 +37,5 @@
 
     - name: Build Image
       shell: |
-        docker build -t steve-nginx-v1 /var/tmp/docker/
-        docker run --name steve-nginx -d -p 8080:80 steve-nginx-v1
+        cd /var/tmp/docker
+        /usr/local/bin/docker-compose up -d
