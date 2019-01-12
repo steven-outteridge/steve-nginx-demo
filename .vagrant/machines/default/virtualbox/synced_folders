@@ -1,1 +1,1 @@
-{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/private/var/root/vagrant-centos2/steve-nginx-demo","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/private/tmp/steve-nginx-demo","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
