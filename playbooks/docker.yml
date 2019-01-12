@@ -1,0 +1,31 @@
+- name: Dockerfile
+  hosts: testserver
+  sudo: True
+  tasks:
+    - name: Install Docker
+      yum:
+        name: docker
+        state: latest
+
+    - name: start docker
+      service: name=docker state=started
+
+    - name: Creates directory
+      file:
+        path: /var/tmp/docker
+        state: directory
+
+    - name: Copy docker files
+      template:
+        src: Dockerfile
+        dest: /var/tmp/docker
+
+    - name: Copy index
+      template:
+        src: index.html
+        dest: /var/tmp/docker
+
+    - name: Build Image
+      shell: |
+        docker build -t steve-nginx-v1 /var/tmp/docker/
+        docker run --name steve-nginx -d -p 8080:80 steve-nginx-v1
