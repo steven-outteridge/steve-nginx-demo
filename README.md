@@ -1,16 +1,16 @@
 Interview Assignment  
 Jan 12th 2019 
-Deploying Enginer - steveoutteridge@hotmail.co.uk
+Deploying Enginer - steveoutteridge@hotmail.co.uk 
 GitRepo -  "git clone https://github.com/steven-outteridge/steve-nginx-demo.git"  
 
 
 Pre-requisits
 -------------
 The assignment was carried out on a Mac OS X 18.2.0
-Dependent packages:
- ansible
- virtualbox
- vagrant
+Dependent packages: 
+ ansible 
+ virtualbox 
+ vagrant 
 
 
 Overview and install  
@@ -24,9 +24,9 @@ The provison includes:
 
 Once the repo has been cloned this can be implemented using:
 
-# git clone https://github.com/steven-outteridge/steve-nginx-demo.git
-# cd steve-nginx-demovagrant up --provision
-# vagrant up --provision
+$ git clone https://github.com/steven-outteridge/steve-nginx-demo.git
+$ cd steve-nginx-demovagrant up --provision
+$ vagrant up --provision
 
 Example Output in can be seen at the end of the README
 
