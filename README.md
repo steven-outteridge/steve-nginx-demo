@@ -35,7 +35,7 @@ Testing the deployment
 
 A basic test can be done with curl:
 
- # curl 192.168.0.233:8080
+ $ curl 192.168.0.233:8080
  <html>
  <header><title>Steve Outteridge</title></header>
  <body>
@@ -43,7 +43,12 @@ A basic test can be done with curl:
  </body>
  </html>
 
+Included in the repo is a python script to test the url:
 
+$ ./urltest.py
+url=192.168.0.233:8080
+192.168.0.233:8080
+Steves URL is up
 
 Example Output
 --------------
