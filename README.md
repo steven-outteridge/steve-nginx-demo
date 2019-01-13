@@ -1,14 +1,14 @@
 Interview Assignment  
 --------------------
-Jan 12th 2019. 
-Deploying Enginer - steveoutteridge@hotmail.co.uk.
-GitRepo -  "git clone https://github.com/steven-outteridge/steve-nginx-demo.git".
+Jan 12th 2019  
+Deploying Enginer - steveoutteridge@hotmail.co.uk  
+GitRepo -  "git clone https://github.com/steven-outteridge/steve-nginx-demo.git  
 
 
 Pre-requisits
 -------------
-The assignment was carried out on a Mac OS X 18.2.0.
-Dependent packages: 
+The assignment was carried out on a Mac OS X 18.2.0  
+Dependent packages:   
 -ansible 
 -virtualbox 
 -vagrant 
@@ -17,24 +17,24 @@ Dependent packages:
 Overview and install  
 --------------------
 
-A vagrant CentOS virtual host is created using virtulbox with a static private IP of 192.168.0.233 then the nginx microservice provisioned via ansible.
-The provison includes:
+A vagrant CentOS virtual host is created using virtulbox with a static private IP of 192.168.0.233 then the nginx microservice provisioned via ansible.  
+The provison includes:  
 -installing and starting docker and docker-compose, 
 -copying Dockerfile docker-compose.yml and basic index.html to the virt
 -starting the nginx:alpine micro service and exposing port 8080
 
-Once the repo has been cloned this can be implemented using:
+Once the repo has been cloned this can be implemented using:  
 
 $ git clone https://github.com/steven-outteridge/steve-nginx-demo.git
 $ cd steve-nginx-demovagrant up --provision
 $ vagrant up --provision
 
-Example Output in can be seen at the end of the README
+Example Output in can be seen at the end of the README  
 
 Testing the deployment
 ----------------------
 
-A basic test can be done with curl:
+A basic test can be done with curl:  
 
  $ curl 192.168.0.233:8080
  <html>
@@ -44,7 +44,7 @@ A basic test can be done with curl:
  </body>
  </html>
 
-Included in the repo is a python script to test the url:
+Included in the repo is a python script to test the url:  
 
 $ ./urltest.py
 url=192.168.0.233:8080
@@ -54,7 +54,7 @@ Steves URL is up
 Example Output
 --------------
 
-# git clone https://github.com/steven-outteridge/steve-nginx-demo.git
+$ git clone https://github.com/steven-outteridge/steve-nginx-demo.git
 Cloning into 'steve-nginx-demo'...
 remote: Enumerating objects: 80, done.
 remote: Counting objects: 100% (80/80), done.
@@ -62,9 +62,9 @@ remote: Compressing objects: 100% (40/40), done.
 remote: Total 80 (delta 11), reused 78 (delta 9), pack-reused 0
 Unpacking objects: 100% (80/80), done.
 
-# cd steve-nginx-demo
+$ cd steve-nginx-demo
 
-# vagrant up --provision
+$ vagrant up --provision
 Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: Importing base box 'centos/7'...
 ==> default: Matching MAC address for NAT networking...
@@ -138,7 +138,7 @@ default                    : ok=9    changed=8    unreachable=0    failed=0
 
 
 
-# curl 192.168.0.233:8080
+$ curl 192.168.0.233:8080
 <html>
 <header><title>Steve Outteridge</title></header>
 <body>
