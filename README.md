@@ -13,6 +13,7 @@ Dependent packages:
 -virtualbox   
 -vagrant   
 
+Deployment tasks all run as root
 
 Overview and install  
 --------------------
@@ -83,23 +84,23 @@ Bringing machine 'default' up with 'virtualbox' provider...\
     default: Vagrant insecure key detected. Vagrant will automatically replace\
     default: this with a newly generated keypair for better security.\
     default: \
-    default: Inserting generated public key within guest...
-    default: Removing insecure key from the guest if it's present...
+    default: Inserting generated public key within guest...\
+    default: Removing insecure key from the guest if it's present...\
     default: Key inserted! Disconnecting and reconnecting using new SSH key...
-==> default: Machine booted and ready!
-==> default: Checking for guest additions in VM...
-    default: No guest additions were detected on the base box for this VM! Guest
-    default: additions are required for forwarded ports, shared folders, host only
-    default: networking, and more. If SSH fails on this machine, please install
-    default: the guest additions and repackage the box to continue.
-    default: 
-    default: This is not an error message; everything may continue to work properly,
-    default: in which case you may ignore this message.
-==> default: Configuring and enabling network interfaces...
-==> default: Rsyncing folder: /private/tmp/steve-nginx-demo/ => /vagrant
-==> default: Running provisioner: ansible...
-Vagrant has automatically selected the compatibility mode '2.0'
-according to the Ansible version installed (2.7.5).
+==> default: Machine booted and ready!\
+==> default: Checking for guest additions in VM...\
+    default: No guest additions were detected on the base box for this VM! Guest\
+    default: additions are required for forwarded ports, shared folders, host only\
+    default: networking, and more. If SSH fails on this machine, please install\
+    default: the guest additions and repackage the box to continue.\
+    default:\ 
+    default: This is not an error message; everything may continue to work properly,\
+    default: in which case you may ignore this message.\
+==> default: Configuring and enabling network interfaces...\
+==> default: Rsyncing folder: /private/tmp/steve-nginx-demo/ => /vagrant\
+==> default: Running provisioner: ansible...\
+Vagrant has automatically selected the compatibility mode '2.0'\
+according to the Ansible version installed (2.7.5).  
 
 PLAY [Dockerfile] **************************************************************
 
@@ -135,7 +136,7 @@ default                    : ok=9    changed=8    unreachable=0    failed=0
 
 
 
-$ curl 192.168.0.233:8080
-Steve Outteridge
+$ curl 192.168.0.233:8080  
+Steve Outteridge  
 Hello world
 
