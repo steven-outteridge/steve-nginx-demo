@@ -51,17 +51,17 @@ Steves URL is up
 Example Output  
 --------------   
 
-$ git clone https://github.com/steven-outteridge/steve-nginx-demo.git  
-Cloning into 'steve-nginx-demo'...
-remote: Enumerating objects: 80, done.
-remote: Counting objects: 100% (80/80), done.
-remote: Compressing objects: 100% (40/40), done.
-remote: Total 80 (delta 11), reused 78 (delta 9), pack-reused 0
-Unpacking objects: 100% (80/80), done.
+$ git clone https://github.com/steven-outteridge/steve-nginx-demo.git\
+Cloning into 'steve-nginx-demo'...\
+remote: Enumerating objects: 80, done.\
+remote: Counting objects: 100% (80/80), done.\
+remote: Compressing objects: 100% (40/40), done.\
+remote: Total 80 (delta 11), reused 78 (delta 9), pack-reused 0\
+Unpacking objects: 100% (80/80), done.\
 
 $ cd steve-nginx-demo
 
-$ vagrant up --provision
+$ vagrant up --provision\
 Bringing machine 'default' up with 'virtualbox' provider...
 ==> default: Importing base box 'centos/7'...
 ==> default: Matching MAC address for NAT networking...
@@ -136,10 +136,6 @@ default                    : ok=9    changed=8    unreachable=0    failed=0
 
 
 $ curl 192.168.0.233:8080
-<html>
-<header><title>Steve Outteridge</title></header>
-<body>
+Steve Outteridge
 Hello world
-</body>
-</html>
 
