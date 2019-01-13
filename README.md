@@ -37,13 +37,14 @@ Testing the deployment
 A basic test can be done with curl:  
 
 $ curl 192.168.0.233:8080   
-<html>   
-<header><title>Steve Outteridge</title></header>   
-<body>   
-Hello world    
-</body>   
+<html>\   
+<header><title>Steve Outteridge</title></header>\   
+<body>\   
+Hello world\    
+</body>\   
 </html>   
 
+.
 
 Included in the repo is a python script to test the url:  
 
