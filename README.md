@@ -26,7 +26,7 @@ The provison includes:
 Once the repo has been cloned this can be implemented using:  
 
 $ git clone https://github.com/steven-outteridge/steve-nginx-demo.git  
-$ cd steve-nginx-demovagrant up --provision  
+$ cd steve-nginx-demo
 $ vagrant up --provision  
 
 Example Output in can be seen at the end of the README    
@@ -36,25 +36,25 @@ Testing the deployment
 
 A basic test can be done with curl:  
 
- $ curl 192.168.0.233:8080
- <html>
- <header><title>Steve Outteridge</title></header>
- <body>
- Hello world
- </body>
- </html>
+ $ curl 192.168.0.233:8080  
+ <html>  
+ <header><title>Steve Outteridge</title></header>  
+ <body>  
+ Hello world  
+ </body>  
+ </html>  
 
 Included in the repo is a python script to test the url:  
 
-$ ./urltest.py
-url=192.168.0.233:8080
-192.168.0.233:8080
-Steves URL is up
+$ ./urltest.py  
+url=192.168.0.233:8080  
+192.168.0.233:8080  
+Steves URL is up  
 
-Example Output
---------------
+Example Output  
+--------------   
 
-$ git clone https://github.com/steven-outteridge/steve-nginx-demo.git
+$ git clone https://github.com/steven-outteridge/steve-nginx-demo.git  
 Cloning into 'steve-nginx-demo'...
 remote: Enumerating objects: 80, done.
 remote: Counting objects: 100% (80/80), done.
